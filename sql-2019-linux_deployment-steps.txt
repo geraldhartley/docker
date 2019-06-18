@@ -1,0 +1,22 @@
+## DOCKER INSTANCE FOR SQL SERVER - DONT DELETE
+
+Install Steps:
+
+1/ choco upgrade chocolatey
+2/ choco install docker-toolbox
+3/ https://docs.docker.com/toolbox/toolbox_install_windows/
+	https://github.com/crops/docker-win-mac-docs/wiki/Windows-Instructions-(Docker-Toolbox)
+4/ https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-linux-ver15&pivots=cs1-bash
+
+Misc:
+https://docs.docker.com/engine/reference/commandline/container_ls/
+
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<UilnipRWbaqtGA6gTcdV>' \
+   -p 1433:1433 --name sql1 \
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+
+	
+	/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<UilnipRWbaqtGA6gTcdV>'
+	
+	
+	<UilnipRWbaqtGA6gTcdV>
